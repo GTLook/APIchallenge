@@ -18,7 +18,7 @@ const getAllServerInfo = () => {
       flatDateData: {
         name: 'pull population by date',
         description: 'pulls the date by the value listed',
-        route1: "/api/date/:number",
+        route1: "/api/date/exact/:number",
         route2: "/api/date/greater/:number",
         route3: "/api/date/less/:number"
       }
