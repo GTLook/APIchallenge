@@ -13,12 +13,12 @@ app.use(cors())
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 
-// if(process.env.NODE_ENV === 'development') app.use(morgan('dev'))
-// if(process.env.NODE_ENV !== 'production') require('dotenv').load()
 
 // Routes
-app.use('/', require('./routes/server'))
-app.use('/api/:data', require('./routes/data'))
+app.use('/', require('./src/routes/server'))
+app.use('/api/', require('./src/routes/data'))
+app.use('/api/pop/', require('./src/routes/pop'))
+app.use('/api/date/', require('./src/routes/date'))
 
 
 // Default Route
@@ -33,6 +33,6 @@ app.use((err, req, res, next) => {
 })
 
 // Starting Server
-const port = process.env.PORT || 8080
+const port = 8080
 app.listen(port, () => {console.log(`Listening on port ${port}`)})
 module.exports = app
