@@ -14,14 +14,14 @@ const getOnePop = (number) => {
 const getPopGreater = (number) => {
   return {
     format: 'date',
-    data: data.filter(day => day.Number < number)
+    data: data.filter(day => day.Number > number)
   }
 }
 
 const getPopLess = (number) => {
   return {
     format: 'date',
-    data: data.filter(day => day.Number > number)
+    data: data.filter(day => day.Number < number)
   }
 }
 
